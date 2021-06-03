@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import stylescss from './Header.module.css';
 const Header =()=>{
     return(
+        <header className={stylescss.header}>
         <nav>
         <ul className={stylescss.sidenav}>
             <li>
@@ -18,6 +19,7 @@ const Header =()=>{
             </li>          
         </ul>
         </nav>
+        </header>
 
     );
 }

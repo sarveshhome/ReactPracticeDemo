@@ -1,21 +1,24 @@
-import {Fragment, react, useState} from 'react';
+import {Fragment, useState} from 'react';
+import styles from './Counter.module.css'
 
 const Counter =()=>{
     const [counter, setCounter] = useState(0);
 
-    const counterHandler = ()=>{
+    const increaseHandler = ()=>{
         setCounter(counter +1);
     };
 
+    const decreaseHandler =()=>{
+        setCounter(counter - 1);
+    }
+
     return(
-    <Fragment>
-    <h1>
-        Counter Value {counter}
-        </h1>    
-        <button onClick={counterHandler} value={counter} > Increate Me</button>
-        <button onClick={counterHandler}  > Decreate Me</button>
-    
-    </Fragment>);
+        <Fragment>
+            <h1>Counter Value {counter}</h1>
+            <button onClick={increaseHandler} value={counter} className={`${styles.button } ${styles.greenbutton}`} >Increase Me</button>
+            <button onClick={decreaseHandler} value={counter} className={`${styles.button } ${styles.redbutton}`} >Decreate Me</button>        
+       </Fragment>
+    );
 }
 
 export default Counter;

@@ -5,6 +5,7 @@ import './App.css';
 import Header from './Components/share/Header';
 import Counter from './Components/UI/Counter';
 import Home from './Components/UI/Home';
+import Footer from './Components/share/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                   
       </Switch>        
       </main>
+      <Footer/>
     </div>
   );
 }
