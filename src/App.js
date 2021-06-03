@@ -6,6 +6,7 @@ import Header from './Components/share/Header';
 import Counter from './Components/UI/Counter';
 import Home from './Components/UI/Home';
 import Footer from './Components/share/Footer';
+import Todo from './Components/UI/Todo';
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
         <Route path='/counter' exact>
           <Counter/>
         </Route>
-                  
+        <Route path="/todolist" exact>
+          <Todo/>
+        </Route>                  
       </Switch>        
       </main>
       <Footer/>
