@@ -16,7 +16,12 @@ const Header =()=>{
                   Counter
             </NavLink>
                 
-            </li>          
+            </li> 
+            <li>
+                <NavLink activeClassName={stylescss.active} to='/todolist'>
+                    Todo
+                </NavLink>
+            </li>         
         </ul>
         </nav>
         </header>
