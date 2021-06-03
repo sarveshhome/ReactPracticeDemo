@@ -1,5 +1,5 @@
 import {Route } from 'react-router-dom';
-import { Switch} from "react-router";
+import {Switch} from "react-router";
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/share/Header';
@@ -8,20 +8,21 @@ import Home from './Components/UI/Home';
 
 function App() {
   return (
-    <div className="App">     
-      
+    <div>     
+       <Header/>       
       <main>
       <Switch>
-        <Route path='/counter'>
-          <Counter/>
-        </Route> 
-        <Route path='/home'>
+        <Route path="/" exact>
           <Home/>
-        </Route>  
-        <Route >
-          <Header/>
         </Route>
-        </Switch>        
+        <Route path='/home' exact>
+          <Home/>
+        </Route> 
+        <Route path='/counter' exact>
+          <Counter/>
+        </Route>
+                  
+      </Switch>        
       </main>
     </div>
   );

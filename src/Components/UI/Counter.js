@@ -12,8 +12,8 @@ const Counter =()=>{
     <h1>
         Counter Value {counter}
         </h1>    
-        <button onClick={counterHandler} />
-
+        <button onClick={counterHandler} value={counter} > Increate Me</button>
+        <button onClick={counterHandler}  > Decreate Me</button>
     
     </Fragment>);
 }
