@@ -3,6 +3,17 @@
    padding: 5px ;
 }
 
+/*textbox*/
+.todo input[type=text], select, textarea {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    float: left;
+}
+
+  /*button*/
 .todo input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -11,13 +22,5 @@
     border-radius: 4px;
     cursor: pointer;
     float: left;
-  }
+ }
 
-.todo input[type=text], select, textarea {
-    width: 30%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    float: left;
-  }
