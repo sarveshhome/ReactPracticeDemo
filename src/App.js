@@ -7,6 +7,7 @@ import Counter from './Components/UI/Counter';
 import Home from './Components/UI/Home';
 import Footer from './Components/share/Footer';
 import Todo from './Components/UI/Todo';
+import Parenta from './Components/UI/Parenta';
 
 function App() {
   return (
@@ -25,7 +26,10 @@ function App() {
         </Route>
         <Route path="/todolist" exact>
           <Todo/>
-        </Route>                  
+        </Route>   
+        <Route path="/PtoC" exact >
+          <Parenta></Parenta>  
+        </Route>              
       </Switch>        
       </main>
       <Footer/>

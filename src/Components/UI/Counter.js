@@ -1,5 +1,5 @@
 import {Fragment, useState} from 'react';
-import styles from './Counter.module.css'
+import styles from './Counter.module.css';
 import Counteruseeffect from './Counteruseeffect';
 
 const Counter =()=>{
