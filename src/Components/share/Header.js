@@ -21,7 +21,12 @@ const Header =()=>{
                 <NavLink activeClassName={stylescss.active} to='/todolist'>
                     Todo
                 </NavLink>
-            </li>         
+            </li>  
+            <li>
+                <NavLink activeClassName={stylescss.active} to='/PtoC'>
+                    Parent to Child
+                </NavLink>
+            </li>       
         </ul>
         </nav>
         </header>
