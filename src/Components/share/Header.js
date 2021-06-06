@@ -1,4 +1,3 @@
-
 import { NavLink } from 'react-router-dom';
 import stylescss from './Header.module.css';
 const Header =()=>{
@@ -26,7 +25,12 @@ const Header =()=>{
                 <NavLink activeClassName={stylescss.active} to='/PtoC'>
                     Parent to Child
                 </NavLink>
-            </li>       
+            </li>  
+            <li>
+                <NavLink activeClassName={stylescss.active} to='/ChildToParent'>
+                    Child To Parent
+                </NavLink>
+                </li>   
         </ul>
         </nav>
         </header>

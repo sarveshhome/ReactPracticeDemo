@@ -8,6 +8,8 @@ import Home from './Components/UI/Home';
 import Footer from './Components/share/Footer';
 import Todo from './Components/UI/Todo';
 import Parenta from './Components/UI/Parenta';
+import Parent from './Components/UI/ChildToParent/Parent';
+
 
 function App() {
   return (
@@ -29,7 +31,10 @@ function App() {
         </Route>   
         <Route path="/PtoC" exact >
           <Parenta></Parenta>  
-        </Route>              
+        </Route>   
+        <Route path='/ChildToParent' exact>
+          <Parent></Parent>
+          </Route>           
       </Switch>        
       </main>
       <Footer/>
