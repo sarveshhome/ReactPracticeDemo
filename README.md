@@ -20,7 +20,14 @@ https://reactpracticedemo.netlify.app
 
 
 
+interview question
+------------------------------------
 
+function vs ()=>{} 
+
+Regular Functions and Arrow Functions
+
+Unlike regular functions, arrow functions do not have their own this. In the case of an arrow function, this refers to the values of this in the environment the arrow function is defined in (i.e. "outside" the arrow function) and that remains the same throughout the lifecycle of the function and is always bound to the value of this in the closest non-arrow parent function.
 
 # Getting Started with Create React App
 
