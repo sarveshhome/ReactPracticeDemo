@@ -3,38 +3,35 @@ import styles from './Todo.module.css';
 
 
 
-const Todo =()=>{
+
+const Todo =()=> {
     const [todofinaldata,setTodofinaldata] = useState([]);
     const [todovalue,setTodoValue] = useState('');
     const [todoid, setTodoid]= useState(1);    
     let itemToRender;
     
     useEffect(()=>{
-        console.log(`useeffect ${todofinaldata}`);        
-        //setTodofinaldata([]);           
+        console.log(todofinaldata);                 
     },[todofinaldata]);
 
     const todoEnterHandler =(event)=>{
-        setTodoValue(event.target.value);
+        setTodoValue(event.target.value);              
     }
 
-    const todoHandler =(event)=>{
+    const todoFormHandler =(event)=>{
         event.preventDefault();
-        setTodofinaldata([   
-                ...todofinaldata,             
-                {id:todoid,
-                todovalue:todovalue}            
-                ]);
-        //setTodoValue();
-        setTodoid(todoid +1);       
-       
+
+        const final = [...todofinaldata, {id:todoid,todovalue:todovalue}];
+        console.log(final);
+        setTodofinaldata(final);        
+        setTodoid(todoid +1);                     
     }
 
     return ( 
         <div className="container">
             <div className="row">
              <div className="buttonsubmit">
-                <form onSubmit={todoHandler}>
+                <form onSubmit={todoFormHandler}>
                     <div className={styles.todo}>
                         <h1>ToDo</h1>
                         <input name="todoName" onChange={todoEnterHandler} type="text"/>
@@ -49,7 +46,7 @@ const Todo =()=>{
                    {       
                     todofinaldata && todofinaldata.map((data)=>
                     (                        
-                         <li> {data.todovalue}</li>
+                         <li key={data.id}> {data.todovalue}</li>
                     ))
                     }
                 </ul>
