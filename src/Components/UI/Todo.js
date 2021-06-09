@@ -1,13 +1,18 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import styles from './Todo.module.css';
 
 
 
 const Todo =()=>{
-    const [todofinaldata,setTodofinaldata] = useState();
+    const [todofinaldata,setTodofinaldata] = useState([]);
     const [todovalue,setTodoValue] = useState('');
-    const [todoid, setTodoid]= useState(0);    
+    const [todoid, setTodoid]= useState(1);    
     let itemToRender;
+    
+    useEffect(()=>{
+        console.log(`useeffect ${todofinaldata}`);        
+        //setTodofinaldata([]);           
+    },[todofinaldata]);
 
     const todoEnterHandler =(event)=>{
         setTodoValue(event.target.value);
@@ -15,24 +20,15 @@ const Todo =()=>{
 
     const todoHandler =(event)=>{
         event.preventDefault();
-        setTodofinaldata( 
+        setTodofinaldata([   
+                ...todofinaldata,             
                 {id:todoid,
-                todovalue:todovalue}
-            
-        );
+                todovalue:todovalue}            
+                ]);
         //setTodoValue();
         setTodoid(todoid +1);       
        
     }
-
-   
-   
-    if(todofinaldata){
-        console.log(todofinaldata);      
-    }
-    else {
-       
-      }
 
     return ( 
         <div className="container">
@@ -50,11 +46,12 @@ const Todo =()=>{
             <div className="row">
                 <div className="todolist">
                     <ul>
-                    if(todofinaldata){
-                    itemToRender = todofinaldata.map(data =>{
-                         <li key={data.id}> data.todovalue</li>
-                     })
-                   }
+                   {       
+                    todofinaldata && todofinaldata.map((data)=>
+                    (                        
+                         <li> {data.todovalue}</li>
+                    ))
+                    }
                 </ul>
                 </div>
             </div>
