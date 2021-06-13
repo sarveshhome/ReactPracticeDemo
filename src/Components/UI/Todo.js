@@ -10,10 +10,15 @@ const Todo =()=> {
     const [todoid, setTodoid]= useState(1);    
     let itemToRender;
     
+
+    // Similar to componentDidMount and componentDidUpdate:
     useEffect(()=>{
-        console.log(todofinaldata);                 
+        console.log(todofinaldata);
+        // Update the console in web browser
+        console.log('useEffect call');
     },[todofinaldata]);
 
+    
     const todoEnterHandler =(event)=>{
         setTodoValue(event.target.value);              
     }
