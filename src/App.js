@@ -9,7 +9,7 @@ import Footer from './Components/share/Footer';
 import Todo from './Components/UI/Todo';
 import Parenta from './Components/UI/Parenta';
 import Parent from './Components/UI/ChildToParent/Parent';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

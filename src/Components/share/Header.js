@@ -30,7 +30,8 @@ const Header =()=>{
                 <NavLink activeClassName={stylescss.active} to='/ChildToParent'>
                     Child To Parent
                 </NavLink>
-                </li>   
+                
+            </li> 
         </ul>
         </nav>
         </header>
