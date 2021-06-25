@@ -10,7 +10,7 @@ import Todo from './Components/UI/Todo';
 import Parenta from './Components/UI/Parenta';
 import Parent from './Components/UI/ChildToParent/Parent';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import CountPage from './Components/Count/page';
 function App() {
   return (
     <div>     
@@ -34,7 +34,10 @@ function App() {
         </Route>   
         <Route path='/ChildToParent' exact>
           <Parent></Parent>
-          </Route>           
+          </Route> 
+          <Route path='/UseByContext'   exact>
+             <CountPage/>
+            </Route>       
       </Switch>        
       </main>
       <Footer/>
