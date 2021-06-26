@@ -32,6 +32,11 @@ const Header =()=>{
                 </NavLink>
                 
             </li> 
+            <li>
+                <NavLink activeClassName={stylescss.active} to ='/UseByContext'>
+                   create Context
+                </NavLink>
+            </li>
         </ul>
         </nav>
         </header>
